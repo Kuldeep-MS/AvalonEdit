@@ -75,7 +75,7 @@ namespace ICSharpCode.AvalonEdit.Editing
 			// Using a dummy element for this purpose ensures that we don't leak
 			// a real text editor (with a potentially large document).
 			UIElement dummyElement = new UIElement();
-			dummyElement.InputBindings.AddRange(inputBindings);
+			//dummyElement.InputBindings.AddRange(inputBindings);
 		}
 
 		#region Undo / Redo

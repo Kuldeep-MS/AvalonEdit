@@ -25,6 +25,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using System.Xml;
+using System.Xml.Linq;
 
 using ICSharpCode.AvalonEdit.CodeCompletion;
 using ICSharpCode.AvalonEdit.Folding;
@@ -75,6 +76,15 @@ namespace ICSharpCode.AvalonEdit.Sample
 			foldingUpdateTimer.Interval = TimeSpan.FromSeconds(2);
 			foldingUpdateTimer.Tick += delegate { UpdateFoldings(); };
 			foldingUpdateTimer.Start();
+
+			//textEditor.Text = "#include<stdio>\n\ntypedef struct node\n		{\n		int data;\n		struct node* next;\n}Node;\n\nint main()\n{\n		Node* root = NULL, *iterator = NULL, *temp = NULL;\n\t\tint num;\n\n"+
+			//	"\t\troot = (Node *)malloc(sizeof(Node));\n\t\troot->data =0;\n\t\troot->next = NULL;\n\t\titerator = root;\n" +
+			//	"\n		printf(\"Enter int for 5 linked-list\\n\");\n" +
+			//	"\n		for (int i = 0; i < 4; i++) {\n			scanf(\"%d\", &num);\n			temp = (Node*)malloc(sizeof(Node));\n			temp->data = num;\n			temp->next = NULL;\n			iterator->next = temp;\n			iterator = iterator->next;\n		}"+
+			//	"\n\n		PrintLinkedList(root);\n\n		return 0;\n}";
+			string filePath = "Readme.txt";
+			string fileContent = File.ReadAllText(filePath);
+			textEditor.Text = fileContent;
 		}
 
 		string currentFileName;

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFrameworks>net6.0-windows;net8.0-windows;net472</TargetFrameworks>
+		<TargetFrameworks>net8.0-windows</TargetFrameworks>
 	<UseWPF>true</UseWPF>
 	<UseWindowsForms>true</UseWindowsForms>
 	<DefineConstants>TRACE</DefineConstants>
@@ -11,7 +11,7 @@
 	<Company>ic#code</Company>
 		<Copyright>2000-2022 AlphaSierraPapa for the SharpDevelop Team</Copyright>
 		<Description>Sample for WPF-based extensible text editor</Description>
-	<IsPackable>false</IsPackable>	
+	<IsPackable>false</IsPackable>
 	</PropertyGroup>
 	
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0-windows' ">
@@ -41,4 +41,9 @@
 	<ItemGroup>
 		<EmbeddedResource Include="CustomHighlighting.xshd" />
 	</ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

@@ -83,10 +83,10 @@
 			</Grid.ColumnDefinitions>
 			<avalonEdit:TextEditor
 				Name="textEditor"
-				FontFamily="Consolas"
-				FontSize="10pt"
+				FontFamily="Cascadia Code"
+				FontSize="20pt"
 				SyntaxHighlighting="C#"
-			>Welcome to AvalonEdit!
+			>
 			</avalonEdit:TextEditor>
 			<GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Left"/>
 			<DockPanel Grid.Column="1" Margin="4 0 0 0">
